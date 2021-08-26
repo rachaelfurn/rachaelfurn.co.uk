@@ -1,10 +1,15 @@
 ---
 permalink: /tags/
 layout: layouts/home.njk
+templateClass: tmpl-post
 ---
 <h1>Tags</h1>
 
+<p>Every blog post has at least one tag; some blog posts have multiple. Use these tags to find the content you want to read, I know not every tag will appeal to every reader!</p>
+
+<p>
 {% for tag in collections.tagList %}
   {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
   <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
 {% endfor %}
+</p>
